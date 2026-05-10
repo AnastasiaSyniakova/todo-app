@@ -1,23 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>to do app</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✅</text></svg>"
+    />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <p class="current-date"></p>
+      <form class="todo-form">
+        <input
+          type="text"
+          name="task"
+          placeholder="What needs doing?"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list"></ul>
+      <button class="clear-btn">Done</button>
     </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
